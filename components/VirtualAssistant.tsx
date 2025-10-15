@@ -91,7 +91,7 @@ export default function VirtualAssistant() {
         to_email: 'info@tamexgroup.com',
         reply_to: formData.contact,
         subject: `${t('assistant.emailSubject')} ${formData.name}`,
-        company: 'TAMEXGROUP',
+        company: 'Tamex Group',
         date: new Date().toLocaleString('ru-RU')
       };
 

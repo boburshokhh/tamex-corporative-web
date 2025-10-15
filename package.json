@@ -1,7 +1,7 @@
 {
   "name": "tamex-frontend",
   "version": "1.0.0",
-  "description": "Frontend для корпоративного сайта TAMEXGROUP",
+  "description": "Frontend для корпоративного сайта Tamex Group",
   "type": "module",
   "packageManager": "bun",
   "scripts": {
@@ -47,7 +47,7 @@
     "typescript",
     "tailwindcss"
   ],
-  "author": "TAMEXGROUP LLC",
+  "author": "Tamex Group LLC",
   "license": "UNLICENSED",
   "private": true
 }
