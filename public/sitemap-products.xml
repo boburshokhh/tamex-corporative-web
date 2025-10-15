@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Фонтанная арматура -->
+  <url>
+    <loc>https://tamexgroup.com/katalog/fontannaya-armatura/fa-65-210/</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tamexgroup.com/katalog/fontannaya-armatura/fa-80-210/</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tamexgroup.com/katalog/fontannaya-armatura/fa-100-210/</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ПВО оборудование -->
+  <url>
+    <loc>https://tamexgroup.com/katalog/pvo-oborudovanie/preventor-35-70/</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tamexgroup.com/katalog/pvo-oborudovanie/preventor-50-105/</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Насосы -->
+  <url>
+    <loc>https://tamexgroup.com/katalog/nasosy/neftyanoj-nasos-cnp-100/</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tamexgroup.com/katalog/nasosy/centrobezhnyj-nasos-150/</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Компрессоры -->
+  <url>
+    <loc>https://tamexgroup.com/katalog/kompressory/vintovoj-kompressor-5000/</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tamexgroup.com/katalog/kompressory/porshnevoj-kompressor-3000/</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Буровое оборудование -->
+  <url>
+    <loc>https://tamexgroup.com/katalog/burovoe-oborudovanie/burovaya-ustanovka-zj-40/</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://tamexgroup.com/katalog/burovoe-oborudovanie/burovoe-doloto-pdc-8-5/</loc>
+    <lastmod>2025-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

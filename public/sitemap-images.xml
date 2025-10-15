@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://tamexgroup.com/katalog/fontannaya-armatura/fa-65-210/</loc>
+    <image:image>
+      <image:loc>https://tamexgroup.com/images/products/fa-65-210-main.webp</image:loc>
+      <image:title>Фонтанная арматура FA-65-210</image:title>
+      <image:caption>Фонтанная арматура FA-65-210 с рабочим давлением 21 МПа для нефтяных скважин</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://tamexgroup.com/images/products/fa-65-210-side.webp</image:loc>
+      <image:title>Фонтанная арматура FA-65-210 - вид сбоку</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tamexgroup.com/katalog/pvo-oborudovanie/preventor-35-70/</loc>
+    <image:image>
+      <image:loc>https://tamexgroup.com/images/products/preventor-35-70-main.webp</image:loc>
+      <image:title>Превенторный блок 35-70</image:title>
+      <image:caption>Превенторный блок для противовыбросового оборудования</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tamexgroup.com/katalog/nasosy/neftyanoj-nasos-cnp-100/</loc>
+    <image:image>
+      <image:loc>https://tamexgroup.com/images/products/cnp-100-main.webp</image:loc>
+      <image:title>Нефтяной насос CNP-100</image:title>
+      <image:caption>Центробежный нефтяной насос производительностью 100 м3/ч</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tamexgroup.com/katalog/kompressory/vintovoj-kompressor-5000/</loc>
+    <image:image>
+      <image:loc>https://tamexgroup.com/images/products/kompressor-5000-main.webp</image:loc>
+      <image:title>Винтовой компрессор 5000</image:title>
+      <image:caption>Винтовой компрессор высокого давления для буровых установок</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://tamexgroup.com/</loc>
+    <image:image>
+      <image:loc>https://tamexgroup.com/images/og-image-main.webp</image:loc>
+      <image:title>ООО Tamex - нефтегазовое оборудование</image:title>
+      <image:caption>Главное изображение сайта ООО «Tamex»</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

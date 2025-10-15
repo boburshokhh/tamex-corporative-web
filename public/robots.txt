@@ -1,0 +1,60 @@
+# Robots.txt для ООО «Tamex»
+# Обновлено: 11.10.2025
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /checkout/
+Disallow: /search?
+Disallow: /*?sort=
+Disallow: /*?filter=
+Disallow: /*&
+Disallow: /*.pdf$
+
+# Разрешить индексацию каталога
+Allow: /katalog/
+Allow: /blog/
+Allow: /uslugi/
+
+# Разрешить изображения
+Allow: /images/
+Allow: /photo/
+Allow: /*.jpg$
+Allow: /*.webp$
+Allow: /*.png$
+
+# Запретить дублирование параметров
+Disallow: /*?page=
+Disallow: /*?p=
+Disallow: /*?utm_
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# YandexBot
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 0
+Host: tamexgroup.com
+
+# Запретить парсеры
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: MJ12bot
+User-agent: DotBot
+Disallow: /
+
+# Sitemap
+Sitemap: https://tamexgroup.com/sitemap.xml
+Sitemap: https://tamexgroup.com/sitemap-products.xml
+Sitemap: https://tamexgroup.com/sitemap-blog.xml
+Sitemap: https://tamexgroup.com/sitemap-images.xml

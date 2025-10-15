@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
+import ProductCard from './ProductCard';
 
 
 export default function Services() {
   const { t } = useLanguage();
   const navigate = useNavigate();
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const handleCatalogClick = () => {
     navigate('/catalog');
@@ -165,65 +165,13 @@ export default function Services() {
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {displayedServices.map((service, index) => (
-            <div
+            <ProductCard
               key={index}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              className="group relative overflow-hidden rounded-lg"
-              style={{ minHeight: '250px' }}
-            >
-              {/* Card Container */}
-              <div className="relative h-full cursor-pointer rounded-lg overflow-hidden">
-                
-                {/* Image */}
-                <img
-                  src={service.image}
-                  alt={t(service.titleKey)}
-                  className="absolute inset-0 w-full h-full object-cover"
-                  loading="lazy"
-                />
-
-                {/* Dark Overlay - only visible on hover */}
-                <div className={`absolute inset-0 bg-black ${
-                  hoveredIndex === index ? 'opacity-80' : 'opacity-0'
-                }`}></div>
-
-                {/* Content Container */}
-                <div className="absolute inset-0 p-4 sm:p-6 md:p-8 flex flex-col justify-between z-10">
-                  
-                  {/* Top Accent Line */}
-                  <div className={`h-1 bg-white/50 transition-all duration-300 ${
-                    hoveredIndex === index ? 'w-16 sm:w-20' : 'w-0'
-                  }`}></div>
-
-                  {/* Bottom Content */}
-                  <div>
-                    {/* Title */}
-                    <h3 className={`text-white font-bold mb-2 sm:mb-3 transition-all duration-300 ${
-                      hoveredIndex === index ? 'text-base sm:text-lg md:text-xl' : 'text-lg sm:text-xl md:text-2xl'
-                    }`}>
-                      {t(service.titleKey)}
-                    </h3>
-
-                    {/* Description - Appears on hover */}
-                    <div className={`overflow-hidden transition-all duration-300 ${
-                      hoveredIndex === index ? 'max-h-0 opacity-0' : 'max-h-0 opacity-0'
-                    }`}>
-                    </div>
-
-                    {/* Bottom Line Indicator */}
-                    <div className={`h-1 bg-white ${
-                      hoveredIndex === index ? 'w-full opacity-80' : 'w-16 opacity-40'
-                    }`}></div>
-                  </div>
-                </div>
-
-                {/* Subtle Border on Hover */}
-                <div className={`absolute inset-0 border-2 border-white/30 ${
-                  hoveredIndex === index ? 'opacity-100' : 'opacity-0'
-                }`}></div>
-              </div>
-            </div>
+              image={service.image}
+              titleKey={service.titleKey}
+              showHoverEffect={false}
+              className="min-h-[250px]"
+            />
           ))}
         </div>
 

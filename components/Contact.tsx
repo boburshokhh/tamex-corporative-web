@@ -53,8 +53,8 @@ export default function Contact() {
         message: formData.message,
         to_email: 'info@tamexgroup.com',
         reply_to: formData.contact,
-        subject: `Сообщение с сайта TAMEXGROUP от ${formData.name}`,
-        company: 'TAMEXGROUP',
+        subject: `Сообщение с сайта Tamex Group от ${formData.name}`,
+        company: 'Tamex Group',
         date: new Date().toLocaleString('ru-RU')
       };
 
@@ -370,7 +370,7 @@ export default function Contact() {
                 <iframe
                   src="https://yandex.ru/map-widget/v1/?ll=69.261680%2C41.278482&z=16&l=map&pt=69.261680%2C41.278482%2Cpm2rdm&source=constructor"
                   className="w-full h-full border-0"
-                  title="TAMEXGROUP Head Office - Tashkent, Uzbekistan"
+                  title="Tamex Group Head Office - Tashkent, Uzbekistan"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   allowFullScreen
@@ -401,7 +401,7 @@ export default function Contact() {
                 <iframe
                   src="https://yandex.ru/map-widget/v1/?ll=71.370000%2C42.900000&z=16&l=map&pt=71.370000%2C42.900000%2Cpm2rdm&source=constructor"
                   className="w-full h-full border-0"
-                  title="TAMEXGROUP Representative Office - Taraz, Kazakhstan"
+                  title="Tamex Group Representative Office - Taraz, Kazakhstan"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   allowFullScreen
