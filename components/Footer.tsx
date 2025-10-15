@@ -91,8 +91,8 @@ export default function Footer() {
               {/* Phone */}
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-white flex-shrink-0" />
-                <a href="tel:+998951230123" className="text-gray-300 text-sm hover:text-white transition-colors">
-                  +998 95 123 01 23
+                <a href="tel:+998771230123" className="text-gray-300 text-sm hover:text-white transition-colors">
+                  +998 77 123 01 23
                 </a>
               </div>
 

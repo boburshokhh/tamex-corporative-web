@@ -255,13 +255,13 @@ export default function Contact() {
                   <h4 className="text-base font-semibold text-gray-800 dark:text-white">{t('contact.phones')}</h4>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  <a 
+                  {/* <a 
                     href="tel:+998951230123" 
                     onClick={() => reachGoal('phone_click')}
                     className="px-3 py-2 rounded text-gray-800 dark:text-gray-200 text-base transition-colors hover:text-blue-600 dark:hover:text-blue-400"
                   >
                     +998 95 123 01 23
-                  </a>
+                  </a> */}
                   <a 
                     href="tel:+998771230123" 
                     onClick={() => reachGoal('phone_click')}
@@ -285,12 +285,12 @@ export default function Contact() {
                   >
                     info@tamexgroup.com
                   </a>
-                  <a 
+                  {/* <a 
                     href="mailto:mail@tamexgroup.com" 
                     className="px-3 py-2 rounded text-gray-800 dark:text-gray-200 text-base transition-colors hover:text-blue-600 dark:hover:text-blue-400 break-all"
                   >
                     mail@tamexgroup.com
-                  </a>
+                  </a> */}
                 </div>
               </div>
 

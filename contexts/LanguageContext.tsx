@@ -145,6 +145,24 @@ const translations = {
     'catalog.subtitle': 'Complete catalog of our industrial equipment',
     'catalog.viewButton': 'Click to view',
     
+    // Products
+    'products.vibratingScreens': 'Vibrating Screens',
+    'products.mudTanks': 'Mud Tanks',
+    'products.manifoldBlocks': 'Manifold Blocks',
+    'products.drillingPumps': 'Drilling Pumps',
+    'products.drillBits': 'Drill Bits',
+    'products.drillPipes': 'Drill Pipes',
+    'products.chokeKillSystem': 'Choke and Kill System',
+    'products.wellheadEquipment': 'Wellhead Equipment',
+    'products.hydraulicControlStation': 'Hydraulic Control Station BOP',
+    'products.preventerBlock': 'Preventer Block',
+    'products.blowoutPrevention': 'Blowout Prevention Equipment',
+    'products.acMotors': 'AC Motors',
+    'products.dieselGenerators': 'Diesel Generators',
+    'products.centrifuge': 'Centrifuge',
+    'products.degasser': 'Degasser',
+    'products.industrialEquipment': 'Industrial Equipment',
+    
     // Tenders
     'tenders.title': 'Tenders and Partners',
     'tenders.description': 'Our track record of successful partnerships and tender achievements',
@@ -396,6 +414,24 @@ const translations = {
     'catalog.subtitle': 'Полный каталог нашего промышленного оборудования',
     'catalog.viewButton': 'Нажмите для просмотра',
     
+    // Products
+    'products.vibratingScreens': 'Вибросита',
+    'products.mudTanks': 'Шламовые баки',
+    'products.manifoldBlocks': 'Блок манифольдов',
+    'products.drillingPumps': 'Буровые насосы',
+    'products.drillBits': 'Буровое долото',
+    'products.drillPipes': 'Бурильные трубы',
+    'products.chokeKillSystem': 'Дроссельно-глушильная система',
+    'products.wellheadEquipment': 'Устьевое оборудование',
+    'products.hydraulicControlStation': 'Гидравлическая станция управления ПВО',
+    'products.preventerBlock': 'Превенторный блок',
+    'products.blowoutPrevention': 'Противовыбросовое оборудование',
+    'products.acMotors': 'Электродвигатели переменного тока',
+    'products.dieselGenerators': 'Дизель-генераторы',
+    'products.centrifuge': 'Центрифуга',
+    'products.degasser': 'Дегазатор',
+    'products.industrialEquipment': 'Промышленное оборудование',
+    
     // Tenders
     'tenders.title': 'Тендеры и партнеры',
     'tenders.description': 'Наш послужной список успешных партнерств и тендерных достижений',
@@ -646,6 +682,24 @@ const translations = {
     'catalog.title': 'Mahsulotlar katalogi',
     'catalog.subtitle': 'Bizning sanoat uskunalarimizning to\'liq katalogi',
     'catalog.viewButton': 'Ko\'rish uchun bosing',
+    
+    // Products
+    'products.vibratingScreens': 'Vibratsion ekranlar',
+    'products.mudTanks': 'Loy tanklari',
+    'products.manifoldBlocks': 'Manifold bloklari',
+    'products.drillingPumps': 'Burg\'ulash nasoslari',
+    'products.drillBits': 'Burg\'ulash qismlari',
+    'products.drillPipes': 'Burg\'ulash quvurlari',
+    'products.chokeKillSystem': 'Bo\'g\'ish-o\'ldirish tizimi',
+    'products.wellheadEquipment': 'Quduq boshi uskunalari',
+    'products.hydraulicControlStation': 'Gidravlik boshqaruv stansiyasi PBO',
+    'products.preventerBlock': 'Preventer bloki',
+    'products.blowoutPrevention': 'Qarshi chiqish uskunalari',
+    'products.acMotors': 'O\'zgaruvchan tok dvigatellari',
+    'products.dieselGenerators': 'Dizel generatorlar',
+    'products.centrifuge': 'Santrifuga',
+    'products.degasser': 'Degazator',
+    'products.industrialEquipment': 'Sanoat uskunalari',
     
     // Tenders
     'tenders.title': 'Tenderlar va hamkorlar',

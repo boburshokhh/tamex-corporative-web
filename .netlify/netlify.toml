@@ -7,7 +7,7 @@ headers = []
 [functions."*"]
 
 [build]
-publish = "C:\\Users\\user\\Downloads\\Telegram Desktop\\frontend (2)\\dist"
+publish = "C:\\Users\\user\\Downloads\\Telegram Desktop\\tamex-inc\\dist"
 publishOrigin = "config"
 commandOrigin = "config"
 command = "npm run build"

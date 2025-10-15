@@ -12,66 +12,86 @@ export default function Catalog() {
 
   const products = [
     {
-      image: '/photo/54584739_3.webp',
-      title: 'Кожухотрубные теплообменники',
-      description: 'Эффективные кожухотрубные теплообменники для различных технологических применений. Индивидуальное проектирование для охлаждения нефти, переработки газа и систем рекуперации тепла.'
+      image: '/photos/Вибросита.png',
+      titleKey: 'products.vibratingScreens'
     },
     {
-      image: '/photo/55088715_3.webp',
-      title: 'Центробежные насосы для нефтегазовой отрасли',
-      description: 'Высокопроизводительные центробежные насосы для нефтегазовой отрасли. Многоступенчатые насосы с магнитным приводом, рассчитанные на жесткие условия эксплуатации и агрессивные среды.'
+      image: '/photos/Шламовые баки.jpg',
+      titleKey: 'products.mudTanks'
     },
     {
-      image: '/photo/photo_2022-04-20_22-24-13.webp',
-      title: 'Линия производства полиэтиленовых труб',
-      description: 'Современные линии производства полиэтиленовых труб высокого и низкого давления. Автоматизированные системы контроля качества и производительности.'
+      image: '/photos/Блок манифольдов.jpg',
+      titleKey: 'products.manifoldBlocks'
     },
     {
-      image: '/photo/photo_2022-04-20_22-35-58.webp',
-      title: 'Пластинчатый теплообменник',
-      description: 'Компактные пластинчатые теплообменники с высокой эффективностью теплопередачи. Легко разбираемые конструкции для удобного обслуживания и очистки.'
+      image: '/photos/Буровые насосы.png',
+      titleKey: 'products.drillingPumps'
     },
     {
-      image: '/photo/photo_2022-04-20_22-36-42.webp',
-      title: 'Теплообменная секция аппарата воздушного охлаждения',
-      description: 'Секции теплообмена для аппаратов воздушного охлаждения. Эффективное охлаждение технологических жидкостей в нефтегазовой и химической промышленности.'
+      image: '/photos/Буровые долото.webp',
+      titleKey: 'products.drillBits'
     },
     {
-      image: '/photo/photo_2022-04-20_22-42-51.webp',
-      title: 'Индустриальный радиатор теплообменник',
-      description: 'Промышленные радиаторные теплообменники для систем охлаждения. Надежные конструкции для работы в экстремальных условиях.'
+      image: '/photos/бурильные трубы.jpg',
+      titleKey: 'products.drillPipes'
     },
     {
-      image: '/photo/photo_2022-04-20_22-47-14.webp',
-      title: 'Компрессорный агрегат для СУГ',
-      description: 'Промышленные компрессорные установки для переработки СУГ и природного газа. Поршневые и винтовые компрессоры с частотно-регулируемым приводом.'
+      image: '/photos/Дроссельно-глушильная система.png',
+      titleKey: 'products.chokeKillSystem'
     },
     {
-      image: '/photo/photo_2022-04-20_22-54-54.webp',
-      title: 'Фильтрующие элементы из нержавеющей стали',
-      description: 'Фильтрующие элементы из нержавеющей стали и рукавные фильтры для высоких температур. Высокая эффективность фильтрации и долгий срок службы.'
+      image: '/photos/Устьевое оборудование.png',
+      titleKey: 'products.wellheadEquipment'
     },
     {
-      image: '/photo/photo_2022-04-20_23-05-04.webp',
-      title: 'Установка нижнего слива 150-4',
-      description: 'Установки нижнего слива и дренажные системы для промышленного применения. Надежные конструкции для эффективного удаления конденсата.'
+      image: '/photos/Гидравлическая станция управления ПВО.jpg',
+      titleKey: 'products.hydraulicControlStation'
     },
     {
-      image: '/photo/photo_2022-04-20_23-07-18.webp',
-      title: 'Биметаллические и термодинамические конденсатоотводчики',
-      description: 'Современные конденсатоотводчики биметаллического и термодинамического типа. Автоматическое удаление конденсата с минимальными потерями пара.'
+      image: '/photos/ПРЕВЕНТОРНЫЙ БЛОК.jpg',
+      titleKey: 'products.preventerBlock'
     },
     {
-      image: '/photo/photo_2022-04-20_22-51-54.webp',
-      title: 'Трубы из углеродистой и нержавеющей стали',
-      description: 'Трубы премиального качества из углеродистой и нержавеющей стали различных типов соединений. Бесшовные и сварные трубы, соответствующие международным стандартам.'
+      image: '/photos/Противовыбросовое оборудование.jfif',
+      titleKey: 'products.blowoutPrevention'
+    },
+    {
+      image: '/photos/Электродвигатели переменного тока.jpg',
+      titleKey: 'products.acMotors'
+    },
+    {
+      image: '/photos/Дизель-генераторы.jpg',
+      titleKey: 'products.dieselGenerators'
+    },
+    {
+      image: '/photos/Центрифуга.jpg',
+      titleKey: 'products.centrifuge'
+    },
+    {
+      image: '/photos/Дегазатор.png',
+      titleKey: 'products.degasser'
+    },
+    {
+      image: '/photos/Предлагаемая продукция.jpg',
+      titleKey: 'products.industrialEquipment'
+    },
+    {
+      image: '/photos/img29.jpg',
+      titleKey: 'products.industrialEquipment'
+    },
+    {
+      image: '/photos/91.jpg',
+      titleKey: 'products.industrialEquipment'
+    },
+    {
+      image: '/photos/бурильные трубы.jpg',
+      titleKey: 'products.drillPipes'
     }
   ];
 
   const lightboxSlides = products.map(product => ({
     src: product.image,
-    title: product.title,
-    description: product.description
+    title: t(product.titleKey)
   }));
 
   const openLightbox = (index: number) => {
@@ -117,7 +137,7 @@ export default function Catalog() {
               <div className="aspect-w-16 aspect-h-12 bg-gray-200 dark:bg-gray-800">
                 <img
                   src={product.image}
-                  alt={product.title}
+                  alt={t(product.titleKey)}
                   className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
@@ -125,8 +145,7 @@ export default function Catalog() {
               {/* Overlay with info */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
-                  <h3 className="text-base sm:text-lg font-bold mb-2">{product.title}</h3>
-                  <p className="text-xs sm:text-sm text-gray-200 line-clamp-2">{product.description}</p>
+                  <h3 className="text-base sm:text-lg font-bold mb-2">{t(product.titleKey)}</h3>
                   
                   {/* View icon */}
                   <div className="mt-3 sm:mt-4 flex items-center gap-2 text-blue-400">

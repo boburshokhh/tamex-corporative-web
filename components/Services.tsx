@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 
-interface CardSize {
-  cols: number;
-  rows: number;
-}
 
 export default function Services() {
   const { t } = useLanguage();
@@ -19,59 +15,80 @@ export default function Services() {
   // Все товары
   const allProducts = [
     {
-      image: '/photo/54584739_3.webp',
-      title: t('products.heatExchangers.title'),
-      description: t('products.heatExchangers.description')
+      image: '/photos/Вибросита.png',
+      titleKey: 'products.vibratingScreens'
     },
     {
-      image: '/photo/55088715_3.webp',
-      title: t('products.centrifugalPumps.title'),
-      description: t('products.centrifugalPumps.description')
+      image: '/photos/Шламовые баки.jpg',
+      titleKey: 'products.mudTanks'
     },
     {
-      image: '/photo/photo_2022-04-20_22-24-13.webp',
-      title: t('products.polyethylenePipes.title'),
-      description: t('products.polyethylenePipes.description')
+      image: '/photos/Блок манифольдов.jpg',
+      titleKey: 'products.manifoldBlocks'
     },
     {
-      image: '/photo/photo_2022-04-20_22-35-58.webp',
-      title: t('products.plateHeatExchanger.title'),
-      description: t('products.plateHeatExchanger.description')
+      image: '/photos/Буровые насосы.png',
+      titleKey: 'products.drillingPumps'
     },
     {
-      image: '/photo/photo_2022-04-20_22-36-42.webp',
-      title: t('products.airCoolerSection.title'),
-      description: t('products.airCoolerSection.description')
+      image: '/photos/Буровые долото.webp',
+      titleKey: 'products.drillBits'
     },
     {
-      image: '/photo/photo_2022-04-20_22-42-51.webp',
-      title: t('products.industrialRadiator.title'),
-      description: t('products.industrialRadiator.description')
+      image: '/photos/бурильные трубы.jpg',
+      titleKey: 'products.drillPipes'
     },
     {
-      image: '/photo/photo_2022-04-20_22-47-14.webp',
-      title: t('products.lpgCompressor.title'),
-      description: t('products.lpgCompressor.description')
+      image: '/photos/Дроссельно-глушильная система.png',
+      titleKey: 'products.chokeKillSystem'
     },
     {
-      image: '/photo/photo_2022-04-20_22-54-54.webp',
-      title: t('products.stainlessFilters.title'),
-      description: t('products.stainlessFilters.description')
+      image: '/photos/Устьевое оборудование.png',
+      titleKey: 'products.wellheadEquipment'
     },
     {
-      image: '/photo/photo_2022-04-20_23-05-04.webp',
-      title: t('products.bottomDrain.title'),
-      description: t('products.bottomDrain.description')
+      image: '/photos/Гидравлическая станция управления ПВО.jpg',
+      titleKey: 'products.hydraulicControlStation'
     },
     {
-      image: '/photo/photo_2022-04-20_23-07-18.webp',
-      title: t('products.condensateTraps.title'),
-      description: t('products.condensateTraps.description')
+      image: '/photos/ПРЕВЕНТОРНЫЙ БЛОК.jpg',
+      titleKey: 'products.preventerBlock'
     },
     {
-      image: '/photo/photo_2022-04-20_22-51-54.webp',
-      title: t('products.steelPipes.title'),
-      description: t('products.steelPipes.description')
+      image: '/photos/Противовыбросовое оборудование.jfif',
+      titleKey: 'products.blowoutPrevention'
+    },
+    {
+      image: '/photos/Электродвигатели переменного тока.jpg',
+      titleKey: 'products.acMotors'
+    },
+    {
+      image: '/photos/Дизель-генераторы.jpg',
+      titleKey: 'products.dieselGenerators'
+    },
+    {
+      image: '/photos/Центрифуга.jpg',
+      titleKey: 'products.centrifuge'
+    },
+    {
+      image: '/photos/Дегазатор.png',
+      titleKey: 'products.degasser'
+    },
+    {
+      image: '/photos/Предлагаемая продукция.jpg',
+      titleKey: 'products.industrialEquipment'
+    },
+    {
+      image: '/photos/img29.jpg',
+      titleKey: 'products.industrialEquipment'
+    },
+    {
+      image: '/photos/91.jpg',
+      titleKey: 'products.industrialEquipment'
+    },
+    {
+      image: '/photos/бурильные трубы.jpg',
+      titleKey: 'products.drillPipes'
     }
   ];
 
@@ -161,7 +178,7 @@ export default function Services() {
                 {/* Image */}
                 <img
                   src={service.image}
-                  alt={service.title}
+                  alt={t(service.titleKey)}
                   className="absolute inset-0 w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -185,16 +202,13 @@ export default function Services() {
                     <h3 className={`text-white font-bold mb-2 sm:mb-3 transition-all duration-300 ${
                       hoveredIndex === index ? 'text-base sm:text-lg md:text-xl' : 'text-lg sm:text-xl md:text-2xl'
                     }`}>
-                      {service.title}
+                      {t(service.titleKey)}
                     </h3>
 
                     {/* Description - Appears on hover */}
                     <div className={`overflow-hidden transition-all duration-300 ${
-                      hoveredIndex === index ? 'max-h-32 sm:max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                      hoveredIndex === index ? 'max-h-0 opacity-0' : 'max-h-0 opacity-0'
                     }`}>
-                      <p className="text-white/95 text-xs sm:text-sm leading-relaxed mb-2 sm:mb-3">
-                        {service.description}
-                      </p>
                     </div>
 
                     {/* Bottom Line Indicator */}
