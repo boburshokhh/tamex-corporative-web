@@ -7,5 +7,14 @@ export default defineConfig({
   mode: "development",
   build: {
     minify: false,
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3001',
+        changeOrigin: true,
+        secure: false,
+      }
+    }
   }
 })

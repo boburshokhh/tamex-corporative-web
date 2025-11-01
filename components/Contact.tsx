@@ -3,17 +3,7 @@ import { Phone, Mail, Send, MapPin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
 import { reachGoal } from '../lib/analytics';
-
-// Типы для переменных окружения
-declare global {
-  interface ImportMetaEnv {
-    readonly VITE_API_URL: string;
-  }
-
-  interface ImportMeta {
-    readonly env: ImportMetaEnv;
-  }
-}
+import { sendTelegramMessage, validateFormData } from '../lib/telegram';
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -38,27 +28,11 @@ export default function Contact() {
     setIsSubmitting(true);
     
     try {
-      // URL API сервера - используем переменную окружения или дефолтный путь
-      const apiUrl = import.meta.env.VITE_API_URL || '/api/contact';
+      // Валидация данных
+      validateFormData(formData);
       
-      // Отправка данных на backend API
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          contact: formData.contact,
-          message: formData.message,
-        }),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok || !data.success) {
-        throw new Error(data.error || 'Ошибка при отправке сообщения');
-      }
+      // Отправка сообщения в Telegram напрямую с фронтенда
+      await sendTelegramMessage(formData);
       
       // Отправляем цель в Яндекс.Метрику
       reachGoal('contact_form_sent');

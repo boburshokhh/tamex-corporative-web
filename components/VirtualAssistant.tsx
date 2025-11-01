@@ -1,21 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { MessageCircle, X, Send } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import emailjs from '@emailjs/browser';
 import { reachGoal } from '../lib/analytics';
-
-// Типы для переменных окружения
-declare global {
-  interface ImportMetaEnv {
-    readonly VITE_EMAILJS_SERVICE_ID: string;
-    readonly VITE_EMAILJS_TEMPLATE_ID: string;
-    readonly VITE_EMAILJS_PUBLIC_KEY: string;
-  }
-
-  interface ImportMeta {
-    readonly env: ImportMetaEnv;
-  }
-}
+import { sendTelegramMessage, validateFormData } from '../lib/telegram';
 
 export default function VirtualAssistant() {
   const { t } = useLanguage();
@@ -80,22 +67,15 @@ export default function VirtualAssistant() {
     setIsSubmitting(true);
     
     try {
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_tamex';
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_contact';
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+      // Валидация данных
+      validateFormData(formData);
       
-      const templateParams = {
-        from_name: formData.name,
-        from_email: formData.contact,
-        message: formData.message,
-        to_email: 'info@tamexgroup.com',
-        reply_to: formData.contact,
-        subject: `${t('assistant.emailSubject')} ${formData.name}`,
-        company: 'Tamex Group',
-        date: new Date().toLocaleString('ru-RU')
-      };
-
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      // Отправка сообщения в Telegram напрямую с фронтенда
+      await sendTelegramMessage({
+        name: formData.name,
+        contact: formData.contact,
+        message: `[Виртуальный ассистент] ${formData.message}`,
+      });
       
       // Отправляем цель в Яндекс.Метрику
       reachGoal('virtual_assistant_form');
@@ -108,7 +88,7 @@ export default function VirtualAssistant() {
         setIsOpen(false);
       }, 3000);
     } catch (error) {
-      console.error('Error sending email:', error);
+      console.error('Ошибка отправки формы:', error);
       setSubmitStatus('error');
       setTimeout(() => setSubmitStatus('idle'), 5000);
     } finally {
