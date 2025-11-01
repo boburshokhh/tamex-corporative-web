@@ -12,6 +12,10 @@ Disallow: /*?sort=
 Disallow: /*?filter=
 Disallow: /*&
 Disallow: /*.pdf$
+# Запретить индексацию языковых роутов, которые не реализованы
+Disallow: /ru/
+Disallow: /uz/
+Disallow: /en/
 
 # Разрешить индексацию каталога
 Allow: /katalog/

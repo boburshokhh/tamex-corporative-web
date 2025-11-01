@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 interface SEOProps {
   title?: string;
@@ -14,9 +15,29 @@ export default function SEO({
   description = "ООО «Tamex» - надежный поставщик нефтегазового и промышленного оборудования. Прямые контракты с заводами-производителями. Оперативные поставки для предприятий Узбекистана и Казахстана.",
   keywords = "нефтегазовое оборудование, промышленное оборудование, поставщик оборудования, Узбекистан, Ташкент, Казахстан, Тараз, фонтанная арматура, ПВО, насосы, компрессоры, трубы, фитинги, КИПиА, буровое оборудование",
   image = "https://tamexgroup.com/photo/3-1.jpg",
-  url = "https://tamexgroup.com/",
+  url,
   type = "website"
 }: SEOProps) {
+  const location = useLocation();
+  
+  // Автоматически генерируем canonical URL на основе текущего роута
+  // Убираем языковые префиксы /ru/, /uz/, /en/ если они есть
+  const getCanonicalUrl = () => {
+    if (url) return url;
+    
+    let path = location.pathname;
+    // Убираем языковые префиксы
+    path = path.replace(/^\/(ru|uz|en)(\/|$)/, '/');
+    // Убираем дублирующий слеш
+    path = path.replace(/\/\/+/g, '/');
+    // Если путь пустой или только слеш, возвращаем корень
+    if (!path || path === '/') {
+      return 'https://tamexgroup.com/';
+    }
+    return `https://tamexgroup.com${path}`;
+  };
+  
+  const canonicalUrl = getCanonicalUrl();
   useEffect(() => {
     // Обновляем title
     document.title = title;
@@ -75,12 +96,21 @@ export default function SEO({
       twitterImage.setAttribute('content', image);
     }
 
-    // Обновляем canonical URL
-    const canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute('href', url);
+    // Обновляем canonical URL - всегда используем правильный URL без языковых префиксов
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
     }
-  }, [title, description, keywords, image, url, type]);
+    canonical.setAttribute('href', canonicalUrl);
+    
+    // Также обновляем og:url
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) {
+      ogUrl.setAttribute('content', canonicalUrl);
+    }
+  }, [title, description, keywords, image, canonicalUrl, type, location.pathname]);
 
   return null;
 }
