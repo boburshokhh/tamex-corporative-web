@@ -110,3 +110,6 @@ temp/
 
 # Local development
 .local/
+
+# Netlify (if used in future)
+.netlify

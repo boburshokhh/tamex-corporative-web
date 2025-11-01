@@ -13,8 +13,8 @@ export default function SEO({
   title = "ООО «Tamex» - Поставщик нефтегазового оборудования | Ташкент, Узбекистан",
   description = "ООО «Tamex» - надежный поставщик нефтегазового и промышленного оборудования. Прямые контракты с заводами-производителями. Оперативные поставки для предприятий Узбекистана и Казахстана.",
   keywords = "нефтегазовое оборудование, промышленное оборудование, поставщик оборудования, Узбекистан, Ташкент, Казахстан, Тараз, фонтанная арматура, ПВО, насосы, компрессоры, трубы, фитинги, КИПиА, буровое оборудование",
-  image = "https://tamex-corporate-website.netlify.app/photo/3-1.jpg",
-  url = "https://tamex-corporate-website.netlify.app/",
+  image = "https://tamexgroup.com/photo/3-1.jpg",
+  url = "https://tamexgroup.com/",
   type = "website"
 }: SEOProps) {
   useEffect(() => {
