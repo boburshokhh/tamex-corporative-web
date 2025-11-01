@@ -88,6 +88,10 @@ export default function About() {
                   src="/photo/3-1.jpg"
                   alt={t('about.industrialPhotoAlt')}
                   className="w-full h-64 object-cover rounded-lg shadow-lg"
+                  loading="lazy"
+                  decoding="async"
+                  width={800}
+                  height={533}
                 />
               </div>
             </div>
