@@ -7,7 +7,7 @@ headers = []
 [functions."*"]
 
 [build]
-publish = "C:\\Users\\User\\Desktop\\tamex-corporative-web\\dist"
+publish = "C:\\Users\\user\\Downloads\\Telegram Desktop\\tamex-inc\\dist"
 publishOrigin = "config"
 commandOrigin = "config"
 command = "npm run build"
@@ -32,6 +32,54 @@ from = "/*"
 to = "/index.html"
 status = 200.0
 force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/ru/*"
+to = "/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/uz/*"
+to = "/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "/en/*"
+to = "/"
+status = 301.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
+
+[[redirects]]
+from = "https://www.tamexgroup.com/*"
+to = "https://tamexgroup.com/:splat"
+status = 301.0
+force = true
 
 [redirects.query]
 
