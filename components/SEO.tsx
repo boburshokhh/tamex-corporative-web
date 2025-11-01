@@ -70,11 +70,6 @@ export default function SEO({
       ogImage.setAttribute('content', image);
     }
 
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) {
-      ogUrl.setAttribute('content', url);
-    }
-
     const ogType = document.querySelector('meta[property="og:type"]');
     if (ogType) {
       ogType.setAttribute('content', type);
