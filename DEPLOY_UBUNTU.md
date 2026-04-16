@@ -52,9 +52,51 @@ pm2 status
 sudo systemctl status nginx --no-pager
 ```
 
-## 5) SSL (Let's Encrypt)
+## 5) SSL — Let's Encrypt через Certbot
+
+### Установка Certbot
 
 ```bash
 sudo apt-get install -y certbot python3-certbot-nginx
-sudo certbot --nginx -d <YOUR_DOMAIN>
+```
+
+### Получение сертификата (+ автонастройка Nginx)
+
+```bash
+# Замените tamexgroup.com на ваш домен
+sudo certbot --nginx -d tamexgroup.com -d www.tamexgroup.com
+```
+
+Certbot сам:
+- запросит email (для уведомлений об истечении)
+- согласится с ToS (выберите `Y`)
+- добавит `listen 443 ssl`, `ssl_certificate`, `ssl_certificate_key` в nginx-конфиг
+- настроит редирект HTTP → HTTPS
+
+### Проверка автопродления
+
+Certbot добавляет systemd-таймер, который обновляет сертификат раз в 60 дней.
+Проверить:
+
+```bash
+sudo systemctl status certbot.timer
+sudo certbot renew --dry-run
+```
+
+### Проверка после получения сертификата
+
+```bash
+curl -I https://tamexgroup.com
+curl https://tamexgroup.com/api/health
+```
+
+### Важно: DNS должен быть настроен ДО запуска certbot
+
+До запуска Certbot убедитесь, что A-запись домена указывает на IP сервера:
+
+```bash
+# Проверить DNS (с любого компьютера)
+nslookup tamexgroup.com
+# или
+dig tamexgroup.com +short
 ```
